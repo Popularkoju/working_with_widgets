@@ -30,10 +30,11 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
         floating: true,
         snap: true,
+        //pinned : bool
       ),
       SliverList(
           delegate: SliverChildBuilderDelegate(
-              (context, index) => BuildCards(index),
+              (context, index) => BuildCards(index, "Sliver app bar"),
               childCount: 50)),
     ]));
     // ListView.separated(
@@ -47,15 +48,16 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class BuildCards extends StatelessWidget {
-  BuildCards(this.index);
+  BuildCards(this.index, this.msg);
   int index;
+  var msg;
 
   @override
   Widget build(BuildContext context) {
     return Container(
         height: 50,
         child: Card(
-          child: Text(" index -- $index"),
+          child: Text(" $msg -- $index"),
         ));
   }
 }
