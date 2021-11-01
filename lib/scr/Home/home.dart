@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sliver__appbar/helper/widgets_helper.dart';
+import 'package:sliver__appbar/scr/Home/app_contents/nested_sliver.dart';
 import 'package:sliver__appbar/scr/Home/app_contents/sliver_app_bar_image.dart';
 
 import 'package:sliver__appbar/scr/Home/app_contents/sliver_appbar_with_list.dart';
@@ -66,8 +67,7 @@ class Home extends StatelessWidget {
                         GestureDetector(
                           onTap: () {
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => const MyHomePage(
-                                    title: "Sliver appbar with image")));
+                                builder: (context) => const SliverNested()));
                           },
                           child: Card(
                               child: Padding(
